@@ -15,7 +15,7 @@ public class Course {
         return credit;
     }
 
-    public double getGradToNumber() {
+    public double getGradeToNumber() {
         double grade = 0;
         switch (this.grade) {
             case "A+":
@@ -44,5 +44,9 @@ public class Course {
                 break;
         }
         return grade;
+    }
+
+    public double multiplyCreditAndCourseGrade() {
+        return credit * getGradeToNumber() ;
     }
 }
