@@ -1,5 +1,7 @@
 package org.example.calculator.domain;
 
+import java.util.Arrays;
+
 public enum ArithmeticOperator {
     ADDITION("+") {
         @Override
