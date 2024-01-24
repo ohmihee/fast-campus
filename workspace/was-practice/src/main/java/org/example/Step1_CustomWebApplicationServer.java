@@ -17,11 +17,11 @@ import java.nio.charset.StandardCharsets;
  * Step 3. Thread Pool을 적용해 안정적인 서비스가 가능하도록 한다.
  *
  * */
-public class CustomWebApplicationServer {
-    private static final Logger logger = LoggerFactory.getLogger(CustomWebApplicationServer.class);
+public class Step1_CustomWebApplicationServer {
+    private static final Logger logger = LoggerFactory.getLogger(Step1_CustomWebApplicationServer.class);
     private final int port;
 
-    public CustomWebApplicationServer(int port) {
+    public Step1_CustomWebApplicationServer(int port) {
         this.port = port;
     }
 
@@ -40,6 +40,9 @@ public class CustomWebApplicationServer {
 
                 /**
                  * Step1. 사용자 요청을 메인 Thread가 처리하도록 한다.
+                 * 문제점
+                 *  : 메인 쓰레드가 작업 수행 과정에서 블러킹에 걸리게 되는 경우, 다음 클라이언트의 요청이 들어와도 이전의 요청이 모두 완료될 때까지 무한히 기다려야만 한다.
+                 *  -> 이를 극복하기 위해 요청이 들어오면서 별도의 쓰레드에서 처리하는 Step2. 사용자 요청이 들어올 때마다 Thread를 새로 생성해서 사용자 요청을 처리하게 한다.
                  * */
 
                 try (InputStream in = clientSocket.getInputStream(); OutputStream out = clientSocket.getOutputStream()){
@@ -87,6 +90,11 @@ public class CustomWebApplicationServer {
                         int operand2 = Integer.parseInt(queryStrings.getValue("operand2"));
 
                         int result = Calculator.calculate(new PositiveNumber(operand1), operator, new PositiveNumber(operand2));
+
+                        HttpResponse response = new HttpResponse(dos);
+                        byte[] body = String.valueOf(result).getBytes();
+                        response.response200Header("application/json", body.length);
+                        response.responseBody(body);
 
                     }
 
