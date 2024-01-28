@@ -1,3 +1,4 @@
 # GET/calculate?operand1=11&operator=*&operand2=55
 #GET http://localhost:8081
-GET http://localhost:9090/calculate?operand1=11&operator=-&operand2=55
+# GET http://localhost:9090/calculate?operand1=11&operator=-&operand2=55
+GET http://localhost:9094/calculate?operand1=1&operator=%2b&operand2=2
