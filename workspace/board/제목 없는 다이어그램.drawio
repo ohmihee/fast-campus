@@ -1,0 +1,170 @@
+<mxfile host="app.diagrams.net" modified="2024-02-04T08:48:11.729Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="lgC7q0iepdPj9srnoDaw" version="23.1.1" type="github">
+  <diagram name="페이지-1" id="Ue3QgiZELW-bqDxXKRT1">
+    <mxGraphModel dx="954" dy="1809" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-1" value="이용자&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="200" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-3" value="게시판 서비스" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=90;height=20;" vertex="1" parent="1">
+          <mxGeometry x="170" y="50" width="620" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-4" value="게시판 보기" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="220" y="240" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="1" source="ezSsMBa1WcPyir-2GSXN-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-6" value="회원가입" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="220" y="140" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-7" value="게시글 보기" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="220" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-10" value="회원로그인" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="420" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-11" value="로그인 실패" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="650" y="190" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-44" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="ezSsMBa1WcPyir-2GSXN-12" target="ezSsMBa1WcPyir-2GSXN-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-12" value="인증" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="660" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-13" value="게시판 정렬" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="450" y="190" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-14" value="게시판 검색" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="450" y="260" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-15" value="게시글 쓰기, 수정, 삭제" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="450" y="396" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-16" value="댓글 보기, &lt;br&gt;쓰기, 수정, 삭제" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="450" y="461" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-21" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;startArrow=none;startFill=0;endArrow=none;endFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ezSsMBa1WcPyir-2GSXN-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="220" as="targetPoint" />
+            <mxPoint x="240" y="190" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="230" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-22" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;startArrow=none;startFill=0;endArrow=none;endFill=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="ezSsMBa1WcPyir-2GSXN-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="220" as="targetPoint" />
+            <mxPoint x="250" y="200" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-23" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;startArrow=none;startFill=0;endArrow=none;endFill=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="ezSsMBa1WcPyir-2GSXN-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="220" as="targetPoint" />
+            <mxPoint x="220" y="270" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-28" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="ezSsMBa1WcPyir-2GSXN-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="100" as="targetPoint" />
+            <mxPoint x="640" y="60" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-30" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="ezSsMBa1WcPyir-2GSXN-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="110" as="targetPoint" />
+            <mxPoint x="640" y="60" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-31" value="** 확장관계: 확장 관계는 해당 기능에 의해 발생 가능한 분기 중의 하나이다.&lt;br&gt;** 포함관계" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-50" width="390" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-33" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="ezSsMBa1WcPyir-2GSXN-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="150" as="targetPoint" />
+            <mxPoint x="420" y="110" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-35" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ezSsMBa1WcPyir-2GSXN-33">
+          <mxGeometry x="0.4838" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-34" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;startArrow=classic;startFill=1;endArrow=none;endFill=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="ezSsMBa1WcPyir-2GSXN-10" target="ezSsMBa1WcPyir-2GSXN-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="160" as="targetPoint" />
+            <mxPoint x="440" y="120" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-36" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;startArrow=none;startFill=0;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="250" as="targetPoint" />
+            <mxPoint x="450" y="210" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-37" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="250" as="targetPoint" />
+            <mxPoint x="450" y="270" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-39" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="ezSsMBa1WcPyir-2GSXN-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="370" as="targetPoint" />
+            <mxPoint x="440" y="330" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-40" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;startArrow=none;startFill=0;endArrow=classic;endFill=1;dashed=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="ezSsMBa1WcPyir-2GSXN-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="370" as="targetPoint" />
+            <mxPoint x="450" y="420" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-41" value="DB" style="html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="840" y="100" width="80" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-45" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="370" as="sourcePoint" />
+            <mxPoint x="840" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="710" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-46" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" target="ezSsMBa1WcPyir-2GSXN-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="250" as="sourcePoint" />
+            <mxPoint x="860" y="165" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-47" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" target="ezSsMBa1WcPyir-2GSXN-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840" y="150" as="sourcePoint" />
+            <mxPoint x="870" y="175" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="760" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ezSsMBa1WcPyir-2GSXN-48" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.444;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitPerimeter=0;" edge="1" parent="1" source="ezSsMBa1WcPyir-2GSXN-41" target="ezSsMBa1WcPyir-2GSXN-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="820" y="140" as="sourcePoint" />
+            <mxPoint x="880" y="185" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="780" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
