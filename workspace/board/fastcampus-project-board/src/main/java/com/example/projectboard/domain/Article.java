@@ -8,18 +8,23 @@ import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
+import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Getter
 @ToString
+// @ToString includes lazy loaded fields and/or associations. This can cause performance and memory consumption issues.
 @Table(indexes = {
         @Index(columnList = "title"),
         @Index(columnList = "hashtag"),
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
 })
+@EntityListeners(AuditingEntityListener.class)
 @Entity
 public class Article {
     @Id
@@ -33,6 +38,14 @@ public class Article {
     private String content; // 본문
     @Setter
     private String hashtag; // 해시태그
+
+    @ToString.Exclude
+    // ToString에서 제외하지 않을 경우, 순환참조 문제가 발생할 수 있다.
+    // Article -> ArticleComment -> Article -> ArticleComment -> Article ...
+    @OrderBy("id")
+    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
+    // 해당 article에 해당하는 articleComment는 중복 허용x
+    private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
 
 
     @CreatedDate
