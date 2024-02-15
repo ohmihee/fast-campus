@@ -60,6 +60,7 @@ spring:
   sql:
     init:
       mode: always
+  # ??? test.database.replace: none? @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)? ?? ????.
   test:
     database:
       replace: none

@@ -5,13 +5,21 @@ import com.example.projectboard.domain.Article;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
+/**
+ * application.yml에서 해당 프로파일로 설정한 데이터베이스를 사용하도록 설정
+ * @ActiveProfiles("testdb")
+ * @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE) 또는 해당 부분을 application.yml으로 설정해줄 수 도 있다.
+ * */
+//@ActiveProfiles("testdb")
+//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @DisplayName("JPA 연결 테스트")
 /**
  * 테스트 코드의 경우 config 파일 설정이 제대로 되지 않는 경우가 있다.
