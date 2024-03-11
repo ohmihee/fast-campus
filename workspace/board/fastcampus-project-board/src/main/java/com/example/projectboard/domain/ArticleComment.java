@@ -20,7 +20,7 @@ import java.util.Objects;
         @Index(columnList = "createdBy")
 })
 @Entity
-public class ArticleComment {
+public class ArticleComment extends AuditingFields{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -33,19 +33,19 @@ public class ArticleComment {
 
 
 
-    @CreatedDate
-    @Column(nullable = false)
-    private LocalDateTime createdAt; // 생성일시
-    @CreatedBy
-    @Column(nullable = false, length = 100)
-    // 누가 등록하였는지에 대한 설정은 config/JpaConfig 클래스에서 설정하여 준다.
-    private String createdBy; // 생성자
-    @LastModifiedDate
-    @Column(nullable = false)
-    private LocalDateTime modifiedAt; // 수정일시
-    @LastModifiedBy
-    @Column(nullable = false, length = 100)
-    private String modifiedBy; // 수정자
+//    @CreatedDate
+//    @Column(nullable = false)
+//    private LocalDateTime createdAt; // 생성일시
+//    @CreatedBy
+//    @Column(nullable = false, length = 100)
+//    // 누가 등록하였는지에 대한 설정은 config/JpaConfig 클래스에서 설정하여 준다.
+//    private String createdBy; // 생성자
+//    @LastModifiedDate
+//    @Column(nullable = false)
+//    private LocalDateTime modifiedAt; // 수정일시
+//    @LastModifiedBy
+//    @Column(nullable = false, length = 100)
+//    private String modifiedBy; // 수정자
 
     protected ArticleComment() {
     }

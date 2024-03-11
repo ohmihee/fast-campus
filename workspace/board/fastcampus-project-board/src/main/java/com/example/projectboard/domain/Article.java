@@ -24,9 +24,9 @@ import java.util.Set;
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
 })
-@EntityListeners(AuditingEntityListener.class)
+//@EntityListeners(AuditingEntityListener.class)
 @Entity
-public class Article {
+public class Article extends AuditingFields{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -48,19 +48,19 @@ public class Article {
     private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
 
 
-    @CreatedDate
-    @Column(nullable = false)
-    private LocalDateTime createdAt; // 생성일시
-    @CreatedBy
-    @Column(nullable = false, length = 100)
-    // 누가 등록하였는지에 대한 설정은 config/JpaConfig 클래스에서 설정하여 준다.
-    private String createdBy; // 생성자
-    @LastModifiedDate
-    @Column(nullable = false)
-    private LocalDateTime modifiedAt; // 수정일시
-    @LastModifiedBy
-    @Column(nullable = false, length = 100)
-    private String modifiedBy; // 수정자
+//    @CreatedDate
+//    @Column(nullable = false)
+//    private LocalDateTime createdAt; // 생성일시
+//    @CreatedBy
+//    @Column(nullable = false, length = 100)
+//    // 누가 등록하였는지에 대한 설정은 config/JpaConfig 클래스에서 설정하여 준다.
+//    private String createdBy; // 생성자
+//    @LastModifiedDate
+//    @Column(nullable = false)
+//    private LocalDateTime modifiedAt; // 수정일시
+//    @LastModifiedBy
+//    @Column(nullable = false, length = 100)
+//    private String modifiedBy; // 수정자
 
 
     // 접근제어자를 protected로 하여 외부에서 New 로 생성하지 못하도록 막음
