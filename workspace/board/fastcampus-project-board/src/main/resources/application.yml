@@ -1,5 +1,5 @@
 server:
-  port: 9093
+  port: 9091
 # ??? ??
 debug: false
 management:
@@ -29,7 +29,7 @@ spring:
   jpa:
     defer-datasource-initialization: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     # open-in-view: false
     # sql ?? ?? ?? ??
     show-sql: true
@@ -46,6 +46,11 @@ spring:
   sql:
     init:
       mode: always
+#  repository 기준으로 rest api 요청할 수 있도록 도와주는 data rest 관련 설정
+  data.rest:
+#    기본포르:api ex) localhost:9191/api
+    base-path: /api
+    detection-strategy: annotated
 
 ---
 spring:
