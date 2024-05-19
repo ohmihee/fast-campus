@@ -28,7 +28,7 @@ out/
 !**/src/main/generated/
 
 ### NetBeans ###
-/nbproject/private/
+/nbproject/private/가
 /nbbuild/
 /dist/
 /nbdist/
