@@ -11,6 +11,10 @@ java {
     sourceCompatibility = '17'
 }
 
+ext {
+    serviceName = 'fastcapus-project-board'
+}
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
@@ -20,6 +24,8 @@ configurations {
 repositories {
     mavenCentral()
 }
+
+print(dependencyManagement)
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
@@ -39,13 +45,49 @@ dependencies {
     //spring data rest
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.data:spring-data-rest-hal-explorer'
-    // data rest를 편하게 화면으로 볼 수 있도록 도와주는 디펜던시
+    // data rest를 편하게 화면으로 볼 수 있도록 도와주는 라이브러리
+
+    // querydsl 관련 설정
+    // querydsl-jpa와 querydsl-core 반드시 필요
+    implementation ("com.querydsl:querydsl-jpa:${dependencyManagement.importedProperties['querydsl.version']}:jakarta")
+    implementation("com.querydsl:querydsl-core")
+    // querydsl 관련한 추가적인 기능을 제공하여 주는 라이브러리
+    // implementation("com.querydsl:querydsl-collections")
+    annotationProcessor "com.querydsl:querydsl-apt:${dependencyManagement.importedProperties['querydsl.version']}:jakarta"
+//    annotationProcessor "jakarta.annotation:jakarta.annotation-api"
+    annotationProcessor "jakarta.persistence:jakarta.persistence-api"
+    // compileJava를 실시하면 java.lang.NoClassDefFoundError: jakarta/persistence/Entity 에러가 발생하는데
+    // 위의 에러를 없애주기 위해 해당 annotationProcessor를 추가
 }
 
-tasks.named('bootBuildImage') {
-    builder = 'paketobuildpacks/builder-jammy-base:latest'
+
+// Querydsl QClass 파일 생성 위치를 지정
+// 기존에 이미 파일
+def generated = 'src/main/generated'
+
+// javaCompile 과정에서 source output 폴더의 경로를 변경하여줌
+tasks.withType(JavaCompile) {
+    options.getGeneratedSourceOutputDirectory().set(file(generated))
 }
 
+// java source set 에 querydsl QClass 위치 추가
+sourceSets {
+    main.java.srcDirs += [ generated ]
+}
+
+// gradle clean 시에 QClass 위치 추가
+clean {
+    // clean 실행 시에 기존에 생성되어 있던 Q클래스 파일들 삭제
+    // src/main/generated -> Q클래스 파일들이 생성되어 있는 경로
+    delete file("src/main/generated")
+}
+
+task serviceName() {
+    doLast {
+        print("------- 서비스명 : " +serviceName + "-------")
+    }
+}
 tasks.named('test') {
     useJUnitPlatform()
 }
+

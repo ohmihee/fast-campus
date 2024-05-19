@@ -56,7 +56,7 @@ spring:
 spring:
   config:
     activate:
-      on-profile: testdb
+      on-profile: testdb경
   datasource:
     url: jdbc:h2:mem:board;mode=mysql
     driverClassName: org.h2.Driver
