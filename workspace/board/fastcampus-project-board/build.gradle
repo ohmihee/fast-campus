@@ -47,7 +47,9 @@ dependencies {
     implementation 'org.springframework.data:spring-data-rest-hal-explorer'
     // data rest를 편하게 화면으로 볼 수 있도록 도와주는 라이브러리
 
-    // querydsl 관련 설정
+    /**
+     * querydsl 관련 설정
+     * */
     // querydsl-jpa와 querydsl-core 반드시 필요
     implementation ("com.querydsl:querydsl-jpa:${dependencyManagement.importedProperties['querydsl.version']}:jakarta")
     implementation("com.querydsl:querydsl-core")
@@ -58,6 +60,12 @@ dependencies {
     annotationProcessor "jakarta.persistence:jakarta.persistence-api"
     // compileJava를 실시하면 java.lang.NoClassDefFoundError: jakarta/persistence/Entity 에러가 발생하는데
     // 위의 에러를 없애주기 위해 해당 annotationProcessor를 추가
+
+    /**
+     * 템플릿 엔진 관련
+     * */
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+
 }
 
 
