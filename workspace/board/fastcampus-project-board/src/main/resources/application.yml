@@ -16,6 +16,8 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: trace
 
 
+
+
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/board
@@ -51,6 +53,8 @@ spring:
 #    기본포르:api ex) localhost:9191/api
     base-path: /api
     detection-strategy: annotated
+  thymeleaf3:
+    decoupled-logic: true
 
 ---
 spring:
