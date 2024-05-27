@@ -13,7 +13,7 @@ import java.util.Optional;
 public class JpaConfig {
 
     @Bean
-    public AuditorAware<String> auditorAware(){
+    public AuditorAware<String> auditorAware() {
         // TODO: 스프링 시큐리티로 인증 기능을 붙이게 될 때, 값이 할당되도록 수정
         return () -> Optional.of("mihee");
     }

@@ -1,6 +1,9 @@
 package com.example.projectboard.controller;
 
 import com.example.projectboard.config.SecurityConfig;
+import com.example.projectboard.domain.Article;
+import com.example.projectboard.dto.ArticleDto;
+import com.example.projectboard.repository.ArticleRepository;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -10,6 +13,11 @@ import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.time.LocalDateTime;
+
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.BDDMockito.*;
+import static org.mockito.Mockito.doNothing;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -18,7 +26,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(ArticleController.class)
 // 인자로 준 클래스만 테스트 대상으로 처리하여 테스트 한다.
 class ArticleControllerTest {
+
+
     private final MockMvc mvc;
+    @Autowired
+    private ArticleRepository articleRepository;
 
 
     // 생성자가 하나만 존재할 때 테스트 파일이 아닌 경우에는  @Autowired를 생략하는 것이 가능하지만
@@ -85,6 +97,8 @@ class ArticleControllerTest {
                 .andExpect(model().attributeExists("articles/search-hashtag"))
         ;
     }
+
+
 
 
 }
