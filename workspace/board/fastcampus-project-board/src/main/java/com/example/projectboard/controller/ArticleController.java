@@ -14,19 +14,19 @@ import java.util.List;
  * /articles/{article-id}
  * /articles/search
  * /articles/search-hashtag
- * */
+ */
 @RequestMapping("/articles")
 @Controller
 public class ArticleController {
 
     @GetMapping
-    public String articles (ModelMap map) {
+    public String articles(ModelMap map) {
         map.addAttribute("articles", List.of());
         return "articles/index";
     }
 
     @GetMapping("/{articleId}")
-    public String article (@PathVariable Long articleId, ModelMap map) {
+    public String article(@PathVariable Long articleId, ModelMap map) {
         map.addAttribute("article", "article");
         map.addAttribute("articleComment", List.of());
         return "articles/detail";
