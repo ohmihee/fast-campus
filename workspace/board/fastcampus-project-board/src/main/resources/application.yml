@@ -32,7 +32,7 @@ spring:
     defer-datasource-initialization: true
     hibernate:
       ddl-auto: update
-    # open-in-view: false
+    open-in-view: false
     # sql ?? ?? ?? ??
     show-sql: true
     properties:
