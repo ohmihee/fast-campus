@@ -1,5 +1,7 @@
 package com.example.projectboard.dto;
 
+import com.example.projectboard.domain.Article;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -12,4 +14,11 @@ public record ArticleDto(LocalDateTime createdAt, String createdBy, String title
         return new ArticleDto(createdAt, createdBy, title,content, hashtag);
     }
     //
+    public static ArticleDto from(Article entity) {
+        return new ArticleDto(null, "", "","","");
+    }
+
+    public Article toEntity () {
+        return Article.of("","","");
+    }
 }
