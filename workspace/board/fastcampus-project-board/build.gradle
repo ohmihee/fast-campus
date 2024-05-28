@@ -75,6 +75,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
 
+    /**
+     * StringUtils 관련
+     * */
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
 }
 
 
