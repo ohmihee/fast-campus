@@ -4,6 +4,7 @@ import com.example.projectboard.domain.Article;
 import com.example.projectboard.domain.type.SearchType;
 import com.example.projectboard.dto.ArticleDto;
 import com.example.projectboard.dto.ArticleUdo;
+import com.example.projectboard.dto.ArticleWithCommentDto;
 import com.example.projectboard.repository.ArticleRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,6 +13,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -32,7 +34,7 @@ class ArticleServiceTest {
         // Given
 
         // When
-        Page<ArticleDto> articles = sut.searchArticles(SearchType.TITLE, "search keyword"); // 제목, 본문, ID, 닉네임, 해시태그
+        Page<ArticleDto> articles = sut.searchArticles(SearchType.TITLE, "search keyword", Pageable.unpaged()); // 제목, 본문, ID, 닉네임, 해시태그
 
         // Then
         assertThat(articles).isNotNull();
@@ -44,7 +46,7 @@ class ArticleServiceTest {
         // Given
 
         // When
-        ArticleDto article = sut.searchArticle(1L);
+        ArticleWithCommentDto article = sut.searchArticle(1L);
 
         assertThat(article).isNotNull();
     }
@@ -54,7 +56,7 @@ class ArticleServiceTest {
     @DisplayName("게시글 정보를 입력하면, 게시글을 생성한다.")
     void givenArticleInfo_whenSavingArticle_thenSaveArticle(){
         // Give
-        ArticleDto dto = ArticleDto.of(LocalDateTime.now(), ",ihee", "title", "content", "hashtage");
+        ArticleDto dto = ArticleDto.of(null,null, null, null, "",null, "title", null, "hashtage");
 
         given(articleRepository.save(any(Article.class))).willReturn(null);
 

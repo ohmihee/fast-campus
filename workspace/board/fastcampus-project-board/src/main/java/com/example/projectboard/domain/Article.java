@@ -30,6 +30,9 @@ public class Article extends AuditingFields{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Setter @ManyToOne(optional = false) private UserAccount userAccount;
+
     @Setter
     @Column(nullable = false)
     private String title; // 제목
@@ -42,7 +45,7 @@ public class Article extends AuditingFields{
     @ToString.Exclude
     // ToString에서 제외하지 않을 경우, 순환참조 문제가 발생할 수 있다.
     // Article -> ArticleComment -> Article -> ArticleComment -> Article ...
-    @OrderBy("id")
+    @OrderBy("createdAt DESC")
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
     // 해당 article에 해당하는 articleComment는 중복 허용x
     private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
