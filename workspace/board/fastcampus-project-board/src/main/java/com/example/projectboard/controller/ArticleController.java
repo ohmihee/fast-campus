@@ -1,5 +1,7 @@
 package com.example.projectboard.controller;
 
+import com.example.projectboard.service.ArticleService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +19,9 @@ import java.util.List;
  */
 @RequestMapping("/articles")
 @Controller
+@RequiredArgsConstructor
 public class ArticleController {
+    private final ArticleService articleService;
 
     @GetMapping
     public String articles(ModelMap map) {

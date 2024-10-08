@@ -7,6 +7,7 @@ import java.io.Serializable;
 /**
  * DTO for {@link UserAccount}
  */
+// userid, userpassword, email, nickname, memo, createdAt, createdBy, modifiedAt, modifiedBy
 public record UserAccountDto(Long userId, String name, String nickname) implements Serializable {
     public static UserAccountDto from(UserAccount userAccount) {
         return new UserAccountDto(
@@ -14,5 +15,9 @@ public record UserAccountDto(Long userId, String name, String nickname) implemen
                 userAccount.getName(),
                 userAccount.getNickname()
         );
+    }
+
+    public static UserAccountDto of(Long userId, String name, String nickname) {
+        return new UserAccountDto(userId, name,nickname);
     }
 }
